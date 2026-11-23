@@ -206,6 +206,15 @@ section{padding:96px 0}
 @media (max-width:560px){.hgrid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.card .art img{transition:none}.hcard{transition:none}}
 
+/* high fives */
+.hfgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hfc{margin:0;background:var(--soft);border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.hfc blockquote{margin:0;font-size:18px;line-height:1.5;letter-spacing:-.01em}
+.hfc figcaption{font-weight:700}
+.hfc figcaption span{font-weight:400;color:var(--gray)}
+@media (max-width:900px){.hfgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.hfgrid{grid-template-columns:1fr}}
+
 /* experience */
 .exp{display:grid;border-top:1px solid var(--line)}
 .exp .row{display:grid;grid-template-columns:160px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
@@ -254,6 +263,7 @@ footer a:hover{color:var(--blue)}
     <nav aria-label="Sections"><ul>
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
+      <li class="opt"><a href="#highfives">High fives</a></li>
       <li class="opt"><a href="#photos">Photos</a></li>
       <li class="opt"><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -411,6 +421,13 @@ footer a:hover{color:var(--blue)}
           <div class="hbody"><span class="hev">First prototype</span><h4>EcoCheme Powercore</h4><p>My first prototype, built around e-waste’s hidden core and introduced to the TKS community.</p><span class="more">View deck ›</span></div>
         </a>
       </div>
+    </div>
+  </section>
+
+  <section id="highfives" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><h2>High fives</h2><p style="margin:8px 0 0;color:var(--gray);font-size:20px">What teammates wrote about me on TKS Life.</p></div></div>
+      <div class="hfgrid"><figure class="hfc"><blockquote>“Uygar is such a great and passionate worker. Over the challenges and projects we’ve worked on together, I think it’s safe to say he is the best PM of all time.”</blockquote><figcaption>Amr <span>· TKS teammate</span></figcaption></figure><figure class="hfc"><blockquote>“One of the most goated PMs ever. He is veryyyy on track, and always sticks to the plan! He doesn’t give way under pressure.”</blockquote><figcaption>Seth <span>· TKS teammate</span></figcaption></figure><figure class="hfc"><blockquote>“I remember Uygar just being a really kind, funny guy, who always had a lot of drive and focus. Stay awesome bro”</blockquote><figcaption>Nimrit <span>· TKS teammate</span></figcaption></figure><figure class="hfc"><blockquote>“Incredibly fun and kind. Not to mention super hardworking and dedicated. He rocked Innovate, can’t wait to see his progress in Activate!!”</blockquote><figcaption>Öykü <span>· TKS teammate</span></figcaption></figure><figure class="hfc"><blockquote>“Nice energy guy! We worked on projects together before and he is great PM.”</blockquote><figcaption>Tiara <span>· TKS teammate</span></figcaption></figure><figure class="hfc"><blockquote>“Got to know Uygar during an Activate session. Genuinely a really good human that I can’t wait to get to know more!”</blockquote><figcaption>Kai <span>· TKS teammate</span></figcaption></figure></div>
     </div>
   </section>
 

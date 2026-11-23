@@ -85,7 +85,7 @@ a{color:inherit}
 .dock a.classic{border-style:dashed;color:var(--dim)}
 .swipe{position:fixed;z-index:10;bottom:58px;left:50%;transform:translateX(-50%);font-family:var(--pixel);font-size:10px;color:var(--dim);display:none}
 @media (max-aspect-ratio:1/1){.swipe{display:block}.hud.tr{display:none}}
-@media (max-width:760px){.dock{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;width:100vw;padding:0 12px;scrollbar-width:none}.dock::-webkit-scrollbar{display:none}.dock button,.dock a{flex:0 0 auto}.swipe{bottom:56px}}
+@media (max-width:760px){.hud.tl{display:none}.dock{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;width:100vw;padding:0 12px;scrollbar-width:none}.dock::-webkit-scrollbar{display:none}.dock button,.dock a{flex:0 0 auto}.swipe{bottom:56px}}
 
 
 /* intro card */
@@ -157,6 +157,11 @@ a{color:inherit}
 .socials a{border:1px solid #DCD4C6;border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:500}
 .socials a:hover{border-color:#0066CC;color:#0066CC}
 .note{font-family:var(--hand);font-size:24px;color:#2E7D5B}
+.hfl{display:grid;gap:14px}
+.hfq{margin:0;background:#fff;border:1px solid #ECE6DA;border-left:4px solid #F2C14E;border-radius:12px;padding:16px 18px}
+.hfq blockquote{margin:0;font-size:17px;line-height:1.55;color:#1D1D1F}
+.hfq figcaption{margin-top:8px;font-weight:600;font-size:14.5px}
+.hfq figcaption span{font-weight:400;color:#7A6E60}
 </style>
 </head>
 <body>
@@ -410,6 +415,16 @@ a{color:inherit}
       </g>
 
       
+      <!-- HIGH FIVES: notes strung above the window -->
+      <g class="hot" id="h-hf" data-panel="hf" role="button" tabindex="0" aria-label="High fives: what teammates say">
+        <rect class="glow" x="570" y="6" width="476" height="80" rx="12" fill="#FFE2A8" opacity="0" filter="url(#soft)"/>
+        <path d="M560 22 Q800 46 1040 22" fill="none" stroke="#C9B994" stroke-width="2.5"/>
+        <g transform="rotate(-5 616 50)"><rect x="589" y="27" width="60" height="50" fill="#000" opacity=".35"/><rect x="586" y="24" width="60" height="50" fill="#F7D774" stroke="#140B07" stroke-width="2.5"/><text x="616" y="47" text-anchor="middle" font-family="Caveat,cursive" font-size="15" fill="#3E3427">Amr</text><path d="M598 58 h36 M598 65 h26" stroke="#3E3427" stroke-width="1.2" opacity=".5"/><rect x="611" y="18" width="10" height="12" rx="2" fill="#B98A5E"/></g><g transform="rotate(4 694 50)"><rect x="667" y="27" width="60" height="50" fill="#000" opacity=".35"/><rect x="664" y="24" width="60" height="50" fill="#CFE8F4" stroke="#140B07" stroke-width="2.5"/><text x="694" y="47" text-anchor="middle" font-family="Caveat,cursive" font-size="15" fill="#3E3427">Seth</text><path d="M676 58 h36 M676 65 h26" stroke="#3E3427" stroke-width="1.2" opacity=".5"/><rect x="689" y="18" width="10" height="12" rx="2" fill="#B98A5E"/></g><g transform="rotate(-3 922 50)"><rect x="895" y="27" width="60" height="50" fill="#000" opacity=".35"/><rect x="892" y="24" width="60" height="50" fill="#F5C6C6" stroke="#140B07" stroke-width="2.5"/><text x="922" y="47" text-anchor="middle" font-family="Caveat,cursive" font-size="15" fill="#3E3427">Nimrit</text><path d="M904 58 h36 M904 65 h26" stroke="#3E3427" stroke-width="1.2" opacity=".5"/><rect x="917" y="18" width="10" height="12" rx="2" fill="#B98A5E"/></g><g transform="rotate(5 1000 50)"><rect x="973" y="27" width="60" height="50" fill="#000" opacity=".35"/><rect x="970" y="24" width="60" height="50" fill="#8FE0A8" stroke="#140B07" stroke-width="2.5"/><text x="1000" y="47" text-anchor="middle" font-family="Caveat,cursive" font-size="15" fill="#3E3427">Öykü</text><path d="M982 58 h36 M982 65 h26" stroke="#3E3427" stroke-width="1.2" opacity=".5"/><rect x="995" y="18" width="10" height="12" rx="2" fill="#B98A5E"/></g>
+        <g transform="rotate(-2 800 48)"><rect x="724" y="20" width="152" height="58" rx="5" fill="url(#paperG)" stroke="#140B07" stroke-width="3"/>
+        <text x="800" y="45" text-anchor="middle" font-family="Silkscreen,monospace" font-size="14" fill="#3E3427">HIGH FIVES</text>
+        <text x="800" y="66" text-anchor="middle" font-family="Caveat,cursive" font-size="15" fill="#2E7D5B">what teammates say</text></g>
+      </g>
+
       <!-- cold window light spill -->
       <polygon points="560,502 1040,502 1150,760 450,760" fill="url(#coldLight)" style="mix-blend-mode:screen" pointer-events="none"/>
 
@@ -731,6 +746,7 @@ a{color:inherit}
   <button data-panel="bio">BIOCIRCUIT</button>
   <button data-panel="map">MAP · PROJECTS</button>
   <button data-panel="journal">JOURNAL · ABOUT</button>
+  <button data-panel="hf">HIGH FIVES</button>
   <button data-panel="photos">PHOTOS</button>
   <button data-panel="radio">WRITING</button>
   <button data-panel="door">CONTACT</button>
@@ -752,6 +768,7 @@ a{color:inherit}
         <button type="button" data-panel="bio"><b>BURNED BOARD</b><span>BioCircuit, circuit boards that biodegrade</span></button>
         <button type="button" data-panel="map"><b>THE MAP</b><span>Ferra Labs, the UN challenge, Callify + hackathons</span></button>
         <button type="button" data-panel="journal"><b>THE JOURNAL</b><span>more about me, experience and awards</span></button>
+        <button type="button" data-panel="hf"><b>NOTES UP TOP</b><span>high fives: what teammates say about me</span></button>
         <button type="button" data-panel="photos"><b>POLAROIDS</b><span>people and places</span></button>
         <button type="button" data-panel="radio"><b>THE RADIO</b><span>my writing</span></button>
         <button type="button" data-panel="door"><b>THE DOOR</b><span>get in touch</span></button>
@@ -840,6 +857,13 @@ a{color:inherit}
       <div class="links"><a href="https://docs.google.com/presentation/d/1ip34tztWycK2AhkMQoWqDgv3Jp7iiEET5j_w04eTPqw/edit">Deck ›</a></div>
     </div>
   </div>
+</template>
+
+<template id="p-hf">
+  <p class="eb">ABOVE THE WINDOW · NOTES FROM TEAMMATES</p>
+  <h2>High fives</h2>
+  <p>What people I’ve built with at TKS wrote about me on TKS Life.</p>
+  <div class="hfl"><figure class="hfq"><blockquote>“Uygar is such a great and passionate worker. Over the challenges and projects we’ve worked on together, I think it’s safe to say he is the best PM of all time.”</blockquote><figcaption>Amr <span>· TKS teammate, via TKS Life</span></figcaption></figure><figure class="hfq"><blockquote>“One of the most goated PMs ever. He is veryyyy on track, and always sticks to the plan! He doesn’t give way under pressure.”</blockquote><figcaption>Seth <span>· TKS teammate, via TKS Life</span></figcaption></figure><figure class="hfq"><blockquote>“I remember Uygar just being a really kind, funny guy, who always had a lot of drive and focus. Stay awesome bro”</blockquote><figcaption>Nimrit <span>· TKS teammate, via TKS Life</span></figcaption></figure><figure class="hfq"><blockquote>“Incredibly fun and kind. Not to mention super hardworking and dedicated. He rocked Innovate, can’t wait to see his progress in Activate!!”</blockquote><figcaption>Öykü <span>· TKS teammate, via TKS Life</span></figcaption></figure><figure class="hfq"><blockquote>“Nice energy guy! We worked on projects together before and he is great PM.”</blockquote><figcaption>Tiara <span>· TKS teammate, via TKS Life</span></figcaption></figure><figure class="hfq"><blockquote>“Got to know Uygar during an Activate session. Genuinely a really good human that I can’t wait to get to know more!”</blockquote><figcaption>Kai <span>· TKS teammate, via TKS Life</span></figcaption></figure></div>
 </template>
 
 <template id="p-journal">
@@ -967,7 +991,7 @@ var Intro=(function(){
 /* drawer */
 (function(){
   var drawer=document.getElementById('drawer'), veil=document.getElementById('veil'), body=document.getElementById('d-body'), key=document.getElementById('d-key'), back=null;
-  var names={glacis:'GLACIS ★',bio:'BIOCIRCUIT',map:'EXPEDITION MAP',journal:'JOURNAL',photos:'PHOTOS',radio:'RADIO',door:'DOOR'};
+  var names={glacis:'GLACIS ★',bio:'BIOCIRCUIT',map:'EXPEDITION MAP',journal:'JOURNAL',photos:'PHOTOS',radio:'RADIO',door:'DOOR',hf:'HIGH FIVES'};
   function open(id){
     back=document.activeElement; body.innerHTML=''; body.appendChild(document.getElementById('p-'+id).content.cloneNode(true));
     if(id==='photos'){var g=body.querySelector('#polGrid');PHOTOS.forEach(function(p,i){var f=document.createElement('figure');f.style.setProperty('--r',(i%2?2:-2)+'deg');f.innerHTML='<img alt="'+CAPS[i]+'" src="'+p+'"><figcaption>'+CAPS[i]+'</figcaption>';g.appendChild(f);});}

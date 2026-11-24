@@ -761,7 +761,7 @@ a{color:inherit}
     <figure class="intro-pol" style="margin:0"><img data-p="1" alt="Uygar smiling at an outdoor table"><span>hi from Turkey!</span></figure>
     <div class="intro-txt">
       <h1 id="intro-h">Hi! I’m Uygar.</h1>
-      <p>I build <b>hardware for extreme cold</b>. Right now that’s <b>Glacis</b>, a glove that warns climbers when their fingers are cooling too fast.</p>
+      <p>I build <b>hardware for extremes</b>. Right now that’s <b>Glacis</b>, a glove that warns climbers when their fingers are cooling too fast.</p>
       <p>Click anything in the hut to look around.</p>
       <button class="intro-go" type="button">Explore the camp →</button>
     </div>
@@ -1016,7 +1016,7 @@ var Intro=(function(){
     var w=document.getElementById('world'); w.scrollLeft=(w.scrollWidth-w.clientWidth)/2; }
   var i=0;
   function step(){ if(i<lines.length){lines[i++].classList.add('on'); setTimeout(step, reduce?0:320);} else {boot.querySelector('.boot-press').classList.add('on');boot.querySelector('.boot-sub').classList.add('on');} }
-  step();
+  boot.style.display='none'; enter();
   boot.addEventListener('click',enter);
   document.addEventListener('keydown',function(e){ if(!done){ e.preventDefault(); enter(); } },{capture:true});
   var w=document.getElementById('world'); w.scrollLeft=(w.scrollWidth-w.clientWidth)/2;
